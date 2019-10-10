@@ -15,7 +15,7 @@ to able to use libaraies such Beam and Servant
 * Kind Polymorphism
 
 ## Moivation
-Why we care about Type-level programming ?
+Why do we care about Type-level programming ?
 
 TODO
 
