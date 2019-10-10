@@ -7,14 +7,15 @@ One of the difficulties in learning haskell is to be productive with Haskell, yo
 to able to use libaraies such Beam and Servant
 
 ## Path
-* MultiParamTypeClasses
-* Functional Depdencies 
+* [MultiParamTypeClasses](#multiparamtypeclasses)
+* Functional Depdencies
 * Type Families
 * GADTs
 * Data Type/Kind Promotion
 * Kind Polymorphism
 
 ## Moivation
+
 Why do we care about Type-level programming ?
 
 TODO
@@ -111,8 +112,8 @@ readAndPrint = do
 ## Functional Dependencies
 
 Type Classes with Functional Depdendencies:
->> Type classes in Haskell allow programmers to define functions that can be used on a set of different types, with a potentially different implementation in the each caes. 
-(aka overloading) 
+>> Type classes in Haskell allow programmers to define functions that can be used on a set of different types, with a potentially different implementation in the each caes.
+(aka overloading)
 
 >> One of the problems with multi-parameter type class is the relation on types that we can specify is too general. It fails to capture important dependenice bewteen parameters. More concretely, the use of mutiple parameter classes can often result in ambiguities and inaccuracies in inferred types.
 
@@ -141,7 +142,7 @@ class FiniteMap i e fm | fm -> (i, e) where
 
 https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#functional-dependencies
 
-So far, we haven't talked about type leve programming. 
+So far, we haven't talked about type leve programming.
 
 TODO decide whether needed to talk about [Fun with Functional Dependencies](http://www.cse.chalmers.se/~hallgren/Papers/hallgren.pdf)
 
@@ -210,7 +211,7 @@ import Data.IORef       (newIORef, readIORef, writeIORef, IORef)
 import Data.STRef       (newSTRef, readSTRef, writeSTRef, STRef)
 
 class Mutation m where
-    type Ref m :: * -> *  
+    type Ref m :: * -> *
     newRef :: a -> m (Ref m a)
     readRef :: Ref m a -> m a
     writeRef :: Ref m a -> a -> m ()
@@ -248,3 +249,7 @@ y = 3 :: Integer
 
 z = add y x
 ```
+
+## GADT
+
+https://www.youtube.com/watch?v=6snteFntvjM
